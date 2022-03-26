@@ -1,0 +1,61 @@
+.circle {
+  font-size: 25px;
+  height: 6.15em;
+  width: 6.11em;
+}
+
+.outer,
+.outer-shadow {
+  cursor: pointer;
+  position: absolute;
+  width: 5.9em;
+  height: 5.7em;
+  border-radius: 100%;
+}
+.inner,
+.inner-shadow {
+  position: absolute;
+  height: 4.11em;
+  width: 4.44em;
+  border-radius: 100%;
+}
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-shadow {
+  transform: translateY(0.25em);
+}
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0.11em);
+  background-color: white;
+}
+.inner img {
+  width: 2em;
+}
+.inner-shadow {
+  transform: translateY(-0.11em);
+  background-color: gainsboro;
+}
+.rock > .outer {
+  background-image: linear-gradient(to top right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+.rock > .outer-shadow {
+  background-color: #9e1735;
+}
+.paper > .outer {
+  background-image: linear-gradient(to top right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.paper > .outer-shadow {
+  background-color: #2945c0;
+}
+.scissor > .outer {
+  background-image: linear-gradient(to top right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.scissor > .outer-shadow {
+  background-color: #c76a1d;
+}

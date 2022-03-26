@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  height: 100vh;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  overflow: hidden;
+}
+.border {
+  border: 1px solid white;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p,
+button {
+  color: white;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  margin: 0;
+  background: transparent;
+}
+.back {
+  padding: 30px 30px;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(farthest-corner at 50% 0, hsl(214, 47%, 23%) 20%, hsl(237, 49%, 15%) 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* head */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+
+  max-width: 40rem;
+  width: 100%;
+  border: 4px solid hsl(217, 16%, 45%);
+}
+.logo {
+  margin: 10px;
+}
+.score {
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  width: 8rem;
+  height: 5rem;
+}
+.score p {
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  color: hsl(229, 64%, 46%);
+}
+.score-count {
+  line-height: 0.9;
+  color: hsl(229, 25%, 31%);
+  font-size: 4rem;
+  font-weight: 700;
+}
+/* head */
+
+/* choose */
+.choose-area {
+  display: none;
+  width: 100%;
+  max-width: 40rem;
+  margin: 5rem;
+}
+.choose-back > img {
+  width: 250px;
+}
+.choose {
+  /* height: 30rem;
+  max-width: 10rem;*/
+
+  column-gap: 3rem;
+  row-gap: 1rem;
+  position: absolute;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-areas:
+    "paper scissor"
+    "rock rock ";
+}
+.paper {
+  grid-area: paper;
+}
+.scissor {
+  grid-area: scissor;
+}
+.rock {
+  grid-area: rock;
+}
+/* choose */
+/* ingame */
+.in-game-area {
+  gap: 4rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.in-game-area .circle {
+  margin-top: 3rem;
+  font-size: 50px;
+}
+.in-game-area p {
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.win-status {
+  width: 11rem;
+  align-self: center;
+}
+.win-status > p {
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+.win-status > button {
+  color: hsl(229, 25%, 31%);
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  background: white;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+}
+/* ingame */
+.rules {
+  display: none;
+}
+.rules-btn {
+  border-radius: 0.4rem;
+  margin: 40px;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 2rem;
+  border: 3px solid hsl(217, 16%, 45%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
