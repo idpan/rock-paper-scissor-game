@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/circle.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <script src="/main.js" defer></script>
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        font-size: 11px;
+        position: absolute;
+        bottom: 0;
+        font-size: 1rem;
         text-align: center;
+        margin-bottom: 20px;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -45,29 +49,23 @@
         <div class="choose">
           <div class="circle paper">
             <div class="outer-shadow"></div>
-            <div class="outer">
+            <div class="outer" data-item="paper">
               <div class="inner-shadow"></div>
-              <div class="inner">
-                <img src="/images/icon-paper.svg" alt="" />
-              </div>
+              <div class="inner"></div>
             </div>
           </div>
           <div class="circle scissor">
             <div class="outer-shadow"></div>
-            <div class="outer">
+            <div class="outer" data-item="scissor">
               <div class="inner-shadow"></div>
-              <div class="inner">
-                <img src="/images/icon-scissors.svg" alt="" />
-              </div>
+              <div class="inner"></div>
             </div>
           </div>
           <div class="circle rock">
             <div class="outer-shadow"></div>
-            <div class="outer">
+            <div class="outer" data-item="rock">
               <div class="inner-shadow"></div>
-              <div class="inner">
-                <img src="/images/icon-rock.svg" alt="" />
-              </div>
+              <div class="inner"></div>
             </div>
           </div>
         </div>
@@ -75,29 +73,25 @@
       <main class="in-game-area">
         <div class="player-picked">
           <p>you picked</p>
-          <div class="circle rock">
+          <div class="circle">
             <div class="outer-shadow"></div>
             <div class="outer">
               <div class="inner-shadow"></div>
-              <div class="inner">
-                <img src="/images/icon-rock.svg" alt="" />
-              </div>
+              <div class="inner"></div>
             </div>
           </div>
         </div>
         <div class="win-status">
           <p>you win</p>
-          <button>play again</button>
+          <button class="play-again">play again</button>
         </div>
         <div class="house-picked">
           <p>the house picked</p>
-          <div class="circle paper">
+          <div class="circle">
             <div class="outer-shadow"></div>
             <div class="outer">
               <div class="inner-shadow"></div>
-              <div class="inner">
-                <img src="/images/icon-paper.svg" alt="" />
-              </div>
+              <div class="inner"></div>
             </div>
           </div>
         </div>
@@ -106,17 +100,21 @@
       <!-- in-game -->
       <!-- in-game -->
       <!-- rules -->
-      <div class="rules">
-        <div class="rules-head">
-          <p>rules</p>
-          <button>x</button>
+      <div class="rules-back">
+        <div class="rules">
+          <div class="rules-head">
+            <p>rules</p>
+            <button class="close">
+              <img src="/images/icon-close.svg" alt="" />
+            </button>
+          </div>
+          <img src="/images/image-rules.svg" alt="" />
         </div>
-        <div class="rules-images"></div>
       </div>
       <!-- rules -->
       <button class="rules-btn">rules</button>
 
-      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.instagram.com/idpanashari" target="_blank">idpan</a>.</div>
     </div>
   </body>
 </html>

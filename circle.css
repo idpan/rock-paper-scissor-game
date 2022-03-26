@@ -6,7 +6,6 @@
 
 .outer,
 .outer-shadow {
-  cursor: pointer;
   position: absolute;
   width: 5.9em;
   height: 5.7em;
@@ -33,9 +32,18 @@
   align-items: center;
   transform: translateY(0.11em);
   background-color: white;
+  background-repeat: no-repeat;
+  background-size: 2em;
+  background-position: center;
 }
-.inner img {
-  width: 2em;
+.rock .inner {
+  background-image: url(/images/icon-rock.svg);
+}
+.paper .inner {
+  background-image: url(/images/icon-paper.svg);
+}
+.scissor .inner {
+  background-image: url(/images/icon-scissors.svg);
 }
 .inner-shadow {
   transform: translateY(-0.11em);

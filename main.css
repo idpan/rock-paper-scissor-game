@@ -21,14 +21,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+button {
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
 p,
 button {
-  color: white;
   font-weight: 600;
   border: none;
   text-transform: uppercase;
-  margin: 0;
-  background: transparent;
 }
 .back {
   padding: 30px 30px;
@@ -45,7 +47,8 @@ button {
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
+  padding-right: 20px;
 
   max-width: 40rem;
   width: 100%;
@@ -60,8 +63,7 @@ button {
   text-align: center;
   border-radius: 5px;
   background-color: white;
-  width: 8rem;
-  height: 5rem;
+  width: 9rem;
 }
 .score p {
   font-size: 0.9rem;
@@ -69,7 +71,6 @@ button {
   color: hsl(229, 64%, 46%);
 }
 .score-count {
-  line-height: 0.9;
   color: hsl(229, 25%, 31%);
   font-size: 4rem;
   font-weight: 700;
@@ -78,7 +79,7 @@ button {
 
 /* choose */
 .choose-area {
-  display: none;
+  display: flex;
   width: 100%;
   max-width: 40rem;
   margin: 5rem;
@@ -104,6 +105,9 @@ button {
     "paper scissor"
     "rock rock ";
 }
+.choose .outer {
+  cursor: pointer;
+}
 .paper {
   grid-area: paper;
 }
@@ -117,8 +121,8 @@ button {
 /* ingame */
 .in-game-area {
   gap: 4rem;
-  margin-top: 5rem;
-  display: flex;
+  margin-top: 4rem;
+  display: none;
   justify-content: space-between;
 }
 .in-game-area .circle {
@@ -148,9 +152,35 @@ button {
   border-radius: 0.3rem;
 }
 /* ingame */
-.rules {
+/* rules area */
+.rules-back {
+  z-index: 999;
   display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+.rules {
+  text-align: center;
+  width: 22rem;
+  padding: 20px;
+  background: white;
+}
+.rules-head {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.rules-head p {
+  color: hsl(229, 25%, 31%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+/* rules area */
 .rules-btn {
   border-radius: 0.4rem;
   margin: 40px;
