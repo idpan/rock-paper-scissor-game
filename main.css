@@ -33,6 +33,7 @@ button {
   text-transform: uppercase;
 }
 .back {
+  position: absolute;
   padding: 30px 30px;
   width: 100vw;
   height: 100vh;
@@ -40,6 +41,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: -100;
 }
 /* head */
 .head {
@@ -125,16 +127,62 @@ button {
   display: none;
   justify-content: space-between;
 }
-.in-game-area .circle {
-  margin-top: 3rem;
+.placeholder,
+.winner-shadow__lg,
+.winner-shadow__md,
+.winner-shadow__sm {
+  border-radius: 100%;
+}
+
+.placeholder {
+  background-color: hsl(237, 49%, 15%);
+  width: 4.44em;
+  height: 4.44em;
+  position: absolute;
+  z-index: -1;
+}
+.winner-shadow__sm {
+  width: 8.5em;
+  height: 8.5em;
+  background-color: hsla(217, 16%, 45%, 0.16);
+}
+.winner-shadow__md {
+  width: 11.5em;
+  height: 11.5em;
+  background: hsla(217, 16%, 45%, 0.15);
+}
+
+.winner-shadow__lg {
+  background-color: hsla(217, 16%, 45%, 0.14);
+  width: 14.5em;
+  height: 14.5em;
+}
+.in-game-area .circle-container {
+  width: 16rem;
+  height: 16rem;
+}
+.house-picked .circle {
+  display: none;
+}
+.winner-shadow {
+  display: none;
+}
+.in-game-area .winner-shadow > *,
+.in-game-area .winner-shadow {
+  z-index: -1;
+  position: absolute;
+}
+.in-game-area .circle-container * {
   font-size: 50px;
 }
 .in-game-area p {
+  margin-bottom: 3rem;
   letter-spacing: 0.1rem;
   text-align: center;
   font-size: 1.5rem;
 }
 .win-status {
+  display: none;
   width: 11rem;
   align-self: center;
 }
