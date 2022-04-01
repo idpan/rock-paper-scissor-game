@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./circle.css" />
+    <link rel="stylesheet" href="./head.css" />
+    <link rel="stylesheet" href="./in-gameArea.css" />
+    <link rel="stylesheet" href="./chooseArea.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <script src="./main.js" defer></script>
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
@@ -18,9 +21,14 @@
       .attribution {
         position: absolute;
         bottom: 0;
-        font-size: 1rem;
+        font-size: 12px;
         text-align: center;
         margin-bottom: 20px;
+      }
+      @media screen and (min-width: 768px) {
+        .attribution {
+          font-size: 1rem;
+        }
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -111,23 +119,24 @@
           </div>
         </div>
       </main>
-      <!-- choose area -->
-      <!-- in-game -->
-      <!-- in-game -->
-      <!-- rules -->
+
       <div class="rules-back">
         <div class="rules">
-          <div class="rules-head">
-            <p>rules</p>
-            <button class="close">
-              <img src="./images/icon-close.svg" alt="" />
-            </button>
+          <p>rules</p>
+
+          <div>
+            <img src="./images/image-rules.svg" alt="" />
           </div>
-          <img src="./images/image-rules.svg" alt="" />
+
+          <button class="close">
+            <img src="./images/icon-close.svg" alt="" />
+          </button>
         </div>
       </div>
       <!-- rules -->
-      <button class="rules-btn">rules</button>
+      <div class="rules-btn__container">
+        <button class="rules-btn">rules</button>
+      </div>
 
       <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.instagram.com/idpanashari" target="_blank">idpan</a>.</div>
     </div>

@@ -50,14 +50,15 @@ function displayToBlock(domElement) {
 }
 function displaySwitcher(resultForPlayer, resultForHouse, winStatus) {
   displayToNone(chooseArea);
-  displayToFlex(inGameArea);
+  window.innerWidth <= 768 ? (inGameArea.style.display = "grid") : (inGameArea.style.display = "flex");
+
   setTimeout(displayToFlex, 900, housePicked.querySelector(".circle"));
   playerPicked.querySelector(".circle").classList.add(resultForPlayer);
   spin();
   setTimeout(function () {
+    housePicked.querySelector(".circle").setAttribute("class", "circle");
     housePicked.querySelector(".circle").classList.add(resultForHouse);
   }, 2000);
-  // setTimeout(displayToFlex, , housePicked.querySelector(".circle"));
   setTimeout(displayToBlock, 2400, winDeclare);
 
   if (winStatus === "win") {
@@ -87,12 +88,12 @@ function spin() {
   let i = 0;
   const roller = setInterval(function () {
     housePicked.querySelector(".circle").classList.remove(element[element.length - 1]);
-
     housePicked.querySelector(".circle").classList.remove(element[i - 1]);
     housePicked.querySelector(".circle").classList.add(element[i++]);
     if (i === element.length) i = 0;
   }, 100);
   setTimeout(clearInterval, 2000, roller);
+  housePicked.querySelector(".circle").classList.remove();
 }
 
 chooseElement.forEach(function (element) {

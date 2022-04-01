@@ -1,0 +1,45 @@
+/* choose */
+.choose-area {
+  width: 100%;
+  height: 50%;
+  max-width: 40rem;
+  margin: 5rem;
+}
+.choose-back > img {
+  width: 200px;
+}
+.choose {
+  column-gap: 3rem;
+  row-gap: 1rem;
+  position: absolute;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  justify-items: center;
+  grid-template-areas:
+    "paper scissor"
+    "rock rock ";
+}
+.choose .outer {
+  cursor: pointer;
+}
+.paper {
+  grid-area: paper;
+}
+.scissor {
+  grid-area: scissor;
+}
+.rock {
+  grid-area: rock;
+}
+.choose .circle:hover {
+  font-size: 34px;
+}
+/* choose */
+@media screen and (min-width: 1024px) {
+  .choose-back > img {
+    width: 350px;
+  }
+}

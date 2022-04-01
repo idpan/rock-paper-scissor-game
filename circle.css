@@ -1,5 +1,5 @@
 .circle {
-  font-size: 25px;
+  font-size: 22px;
   height: 5.95em;
   width: 5.9em;
   display: flex;
@@ -68,4 +68,9 @@
 }
 .scissor > .outer-shadow {
   background-color: #c76a1d;
+}
+@media screen and (min-width: 768px) {
+  .circle {
+    font-size: 35px;
+  }
 }

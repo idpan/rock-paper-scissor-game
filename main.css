@@ -43,163 +43,6 @@ button {
   align-items: center;
   z-index: -100;
 }
-/* head */
-.head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  padding: 15px;
-  padding-right: 20px;
-
-  max-width: 40rem;
-  width: 100%;
-  border: 4px solid hsl(217, 16%, 45%);
-}
-.logo {
-  margin: 10px;
-}
-.score {
-  font-weight: 700;
-  padding: 8px 0;
-  text-align: center;
-  border-radius: 5px;
-  background-color: white;
-  width: 9rem;
-}
-.score p {
-  font-size: 0.9rem;
-  letter-spacing: 0.2rem;
-  color: hsl(229, 64%, 46%);
-}
-.score-count {
-  color: hsl(229, 25%, 31%);
-  font-size: 4rem;
-  font-weight: 700;
-}
-/* head */
-
-/* choose */
-.choose-area {
-  display: flex;
-  width: 100%;
-  max-width: 40rem;
-  margin: 5rem;
-}
-.choose-back > img {
-  width: 250px;
-}
-.choose {
-  /* height: 30rem;
-  max-width: 10rem;*/
-
-  column-gap: 3rem;
-  row-gap: 1rem;
-  position: absolute;
-
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  grid-template-areas:
-    "paper scissor"
-    "rock rock ";
-}
-.choose .outer {
-  cursor: pointer;
-}
-.paper {
-  grid-area: paper;
-}
-.scissor {
-  grid-area: scissor;
-}
-.rock {
-  grid-area: rock;
-}
-/* choose */
-/* ingame */
-.in-game-area {
-  gap: 4rem;
-  margin-top: 4rem;
-  display: none;
-  justify-content: space-between;
-}
-.placeholder,
-.winner-shadow__lg,
-.winner-shadow__md,
-.winner-shadow__sm {
-  border-radius: 100%;
-}
-
-.placeholder {
-  background-color: hsl(237, 49%, 15%);
-  width: 4.44em;
-  height: 4.44em;
-  position: absolute;
-  z-index: -1;
-}
-.winner-shadow__sm {
-  width: 8.5em;
-  height: 8.5em;
-  background-color: hsla(217, 16%, 45%, 0.16);
-}
-.winner-shadow__md {
-  width: 11.5em;
-  height: 11.5em;
-  background: hsla(217, 16%, 45%, 0.15);
-}
-
-.winner-shadow__lg {
-  background-color: hsla(217, 16%, 45%, 0.14);
-  width: 14.5em;
-  height: 14.5em;
-}
-.in-game-area .circle-container {
-  width: 16rem;
-  height: 16rem;
-}
-.house-picked .circle {
-  display: none;
-}
-.winner-shadow {
-  display: none;
-}
-.in-game-area .winner-shadow > *,
-.in-game-area .winner-shadow {
-  z-index: -1;
-  position: absolute;
-}
-.in-game-area .circle-container * {
-  font-size: 50px;
-}
-.in-game-area p {
-  margin-bottom: 3rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  font-size: 1.5rem;
-}
-.win-status {
-  display: none;
-  width: 11rem;
-  align-self: center;
-}
-.win-status > p {
-  font-weight: 700;
-  font-size: 2.6rem;
-}
-.win-status > button {
-  color: hsl(229, 25%, 31%);
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-  background: white;
-  width: 100%;
-  padding: 0.7rem;
-  border-radius: 0.3rem;
-}
-/* ingame */
 /* rules area */
 .rules-back {
   z-index: 999;
@@ -213,29 +56,63 @@ button {
   bottom: 0;
 }
 .rules {
-  text-align: center;
-  width: 22rem;
+  display: grid;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   background: white;
+  justify-content: center;
 }
-.rules-head {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-between;
-}
-.rules-head p {
+.rules p {
+  text-align: center;
+  margin-top: 4rem;
   color: hsl(229, 25%, 31%);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 /* rules area */
+.rules-btn__container {
+  margin-bottom: 4rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
 .rules-btn {
+  text-align: center;
   border-radius: 0.4rem;
-  margin: 40px;
+
   letter-spacing: 0.1rem;
   padding: 0.5rem 2rem;
   border: 3px solid hsl(217, 16%, 45%);
-  position: absolute;
-  bottom: 0;
-  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .rules-btn__container {
+    margin-right: 4rem;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 480px) {
+  .rules {
+    border-radius: 0.4rem;
+    align-items: center;
+    width: 22rem;
+    height: 22rem;
+    grid-template-columns: fit-content fit-content;
+    grid-template-rows: fit-content fit-content;
+    grid-template-areas: "p close" "img img";
+  }
+  .rules p {
+    text-align: left;
+    margin-top: 0;
+    grid-area: p;
+  }
+  .rules button {
+    justify-self: end;
+    grid-area: close;
+  }
+  .rules > div {
+    grid-area: img;
+  }
 }

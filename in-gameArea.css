@@ -1,0 +1,129 @@
+/* ingame */
+.in-game-area {
+  width: 100vw;
+  display: none;
+
+  margin-top: 5rem;
+}
+.player-picked {
+  grid-area: player;
+}
+.house-picked {
+  grid-area: house;
+}
+.player-picked,
+.house-picked {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.placeholder,
+.winner-shadow__lg,
+.winner-shadow__md,
+.winner-shadow__sm {
+  border-radius: 100%;
+}
+
+.placeholder {
+  background-color: hsl(237, 49%, 15%);
+  width: 4.44em;
+  height: 4.44em;
+  position: absolute;
+  z-index: -1;
+}
+.winner-shadow__sm {
+  width: 8.5em;
+  height: 8.5em;
+  background-color: hsla(217, 16%, 45%, 0.16);
+}
+.winner-shadow__md {
+  width: 11.5em;
+  height: 11.5em;
+  background: hsla(217, 16%, 45%, 0.15);
+}
+
+.winner-shadow__lg {
+  background-color: hsla(217, 16%, 45%, 0.14);
+  width: 14.5em;
+  height: 14.5em;
+}
+.in-game-area .circle-container {
+  width: 100%;
+  height: 100%;
+}
+.house-picked .circle {
+  display: none;
+}
+.winner-shadow {
+  display: none;
+}
+.in-game-area .winner-shadow > *,
+.in-game-area .winner-shadow {
+  z-index: -1;
+  position: absolute;
+}
+.in-game-area .circle-container * {
+  font-size: 24px;
+}
+.player-picked p,
+.house-picked p {
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.win-status {
+  text-align: center;
+  justify-self: center;
+  grid-area: win-status;
+  display: none;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+.win-status > p {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.win-status > button {
+  color: hsl(229, 25%, 31%);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background: white;
+  padding: 0.8rem 3rem;
+  border-radius: 0.3rem;
+}
+.win-status > button:hover {
+  color: hsl(349, 71%, 52%);
+}
+/* ingame */
+@media screen and (min-width: 768px) {
+  .in-game-area .circle-container * {
+    font-size: 50px;
+  }
+  .in-game-area {
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+  }
+  .in-game-area .circle-container {
+    width: 17em;
+    height: 17em;
+  }
+  .player-picked,
+  .house-picked {
+    gap: 3rem;
+    flex-direction: column;
+  }
+  .player-picked p,
+  .house-picked p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .in-game-area {
+    row-gap: 3rem;
+    grid-template-rows: max-content max-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "player house" "win-status win-status";
+  }
+}
