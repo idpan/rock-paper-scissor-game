@@ -39,13 +39,13 @@
   background-position: center;
 }
 .rock .inner {
-  background-image: url(images/icon-rock.svg);
+  background-image: url(./images/icon-rock.svg);
 }
 .paper .inner {
-  background-image: url(images/icon-paper.svg);
+  background-image: url(./images/icon-paper.svg);
 }
 .scissor .inner {
-  background-image: url(images/icon-scissors.svg);
+  background-image: url(./images/icon-scissors.svg);
 }
 .inner-shadow {
   transform: translateY(-0.11em);
